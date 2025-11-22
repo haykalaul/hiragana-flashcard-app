@@ -7,7 +7,7 @@ import { Audio } from "expo-av"
 
 export default function App() {
   // GANTI URL INI dengan URL aplikasi Streamlit yang sudah dideploy (misal: share.streamlit.io)
-  const STREAMLIT_URL = "https://japacard-demo.streamlit.app"
+  const STREAMLIT_URL = "https://japacard.streamlit.app"
 
   const [hasPermission, setHasPermission] = useState<boolean | null>(null)
 
@@ -53,6 +53,16 @@ export default function App() {
         onPermissionRequest={(event) => {
           // Otomatis memberikan izin yang diminta oleh webview (seperti mic)
           event.approve()
+        }}
+        onError={(syntheticEvent) => {
+          const { nativeEvent } = syntheticEvent;
+          console.warn('WebView error: ', nativeEvent);
+          alert(`Terjadi kesalahan saat memuat: ${nativeEvent.description}`);
+        }}
+        onHttpError={(syntheticEvent) => {
+          const { nativeEvent } = syntheticEvent;
+          console.warn('WebView HTTP error: ', nativeEvent);
+          alert(`HTTP error saat memuat: ${nativeEvent.statusCode}`);
         }}
       />
     </SafeAreaView>
