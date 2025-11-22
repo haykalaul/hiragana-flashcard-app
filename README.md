@@ -42,11 +42,11 @@ Aplikasi inti JapCard adalah aplikasi Streamlit berbasis Python.
 
 Pastikan Anda sudah menginstal [Node.js](https://nodejs.org/).
 
-```bash
+\`\`\`bash
 cd mobile
 npm install
 npm start
-```
+\`\`\`
 
 Anda dapat menjalankan aplikasi pada emulator/simulator Android atau iOS, atau perangkat fisik menggunakan Expo Go.
 
@@ -56,31 +56,31 @@ Ikuti langkah berikut untuk membangun APK untuk perangkat Android:
 
 1. Instal dependencies dan EAS CLI:
 
-```bash
+\`\`\`bash
 cd mobile
 npm install
 npm install -g eas-cli
-```
+\`\`\`
 
 2. Login ke Expo:
 
-```bash
+\`\`\`bash
 eas login
-```
+\`\`\`
 
 3. Konfigurasikan build untuk Android:
 
-```bash
+\`\`\`bash
 eas build:configure
-```
+\`\`\`
 
 Pilih `Android` saat konfigurasi.
 
 4. Bangun APK:
 
-```bash
+\`\`\`bash
 eas build -p android --profile preview
-```
+\`\`\`
 
 5. Setelah proses selesai, Anda akan mendapatkan tautan unduh file `.apk` yang dapat langsung diinstall di perangkat Android.
 
@@ -92,7 +92,7 @@ eas build -p android --profile preview
 
 ## Struktur Folder Proyek
 
-```
+\`\`\`
 .
 ├── app/                      # File sumber aplikasi web
 ├── components/               # Komponen UI untuk aplikasi web
@@ -110,7 +110,7 @@ eas build -p android --profile preview
 ├── package.json              # Dependencies proyek (web app)
 ├── requirements.txt          # Dependencies Python untuk aplikasi Streamlit
 └── next.config.mjs           # Konfigurasi Next.js (untuk web)
-```
+\`\`\`
 
 ## Dokumentasi
 
