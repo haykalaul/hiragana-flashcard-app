@@ -4,12 +4,15 @@
     "slug": "japacard-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./public/placeholder-logo.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./public/placeholder-logo.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#FF6B6B"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
@@ -21,7 +24,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./public/placeholder-logo.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#FF6B6B"
       },
       "package": "com.yourname.japacard",
@@ -32,7 +35,7 @@
       ]
     },
     "web": {
-      "favicon": "./public/placeholder-logo.png"
+      "favicon": "./assets/icon.png"
     },
     "plugins": [
       [
